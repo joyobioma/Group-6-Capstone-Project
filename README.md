@@ -9,15 +9,15 @@ It is based on the provided Figma design and developed using HTML, CSS, and Java
 The project also includes interactive features and responsive design so that it works well across different screen sizes.
 
 ### Team Members 
-* Joy (Team Lead) 
-* Mercy ( Assistant Team Lead) 
-* Tayo
-* Isaiah
-* Quadri
-* Calistus
-* Victoria
+* Joy Obioma (Team Lead) - https://github.com/joyobioma
+* Mercy Yakubu ( Assistant Team Lead) - https://github.com/Mercyaksss
+* Tayo - https://github.com/temikanmi-ops
+* Isaiah Adebayo - https://github.com/ZahYah
+* Quadri - https://github.com/quadri-101
+* Calistus - https://github.com/gentlekhally
+* Victoria Akinlolu - https://github.com/webquilldev
 * Tolulope
-* Oluwaferanmi
-* Benedict
+* Oluwaferanmi - github.com/oluwaferanmi007 
+* Benedict Okeh - https://github.com/AskBenSantos
 
 #### 
