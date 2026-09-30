@@ -9,15 +9,15 @@ It is based on the provided Figma design and developed using HTML, CSS, and Java
 The project also includes interactive features and responsive design so that it works well across different screen sizes.
 
 ### Team Members 
-Joy (Team Lead) 
-Mercy ( Assistant Team Lead) 
-Tayo
-Isaiah
-Quadri
-Calistus
-Victoria
-Tolulope
-Oluwaferanmi
-Benedict
+* Joy (Team Lead) 
+* Mercy ( Assistant Team Lead) 
+* Tayo
+* Isaiah
+* Quadri
+* Calistus
+* Victoria
+* Tolulope
+* Oluwaferanmi
+* Benedict
 
 #### 
