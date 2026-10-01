@@ -21,6 +21,7 @@ The project also includes interactive features and responsive design so that it 
 * Oluwaferanmi - https://github.com/oluwaferanmi007 
 * Benedict Okeh - https://github.com/AskBenSantos
 * Abolaji Usman - https://github.com/Jayprince-max
+* Emmanuel Oguntukesi - Https://github.com/OguntukesiE
 
 ### Task Distribution
 
