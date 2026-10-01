@@ -39,7 +39,7 @@ For the initial HTML and CSS phase, the project has been divided into three main
 
 #### Footer
 
-**Team Members:** Victoria, Quadri, Jay
+**Team Members:** Victoria, Quadri, Abolaji, Emmanuel
 **Coordinator:** Victoria
 
 JavaScript functionality and API integration will be handled in a later phase.
