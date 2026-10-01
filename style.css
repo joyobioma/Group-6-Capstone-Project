@@ -1,6 +1,74 @@
-*{
-  box-sizing: border-box;
+/* =========================
+   CSS RESET
+   ========================= */
+
+/* 1. Use border-box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
+
+/* 2. Remove default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Enable smooth scrolling when appropriate */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* 4. Improve text rendering */
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Make media responsive */
+img,
+svg,
+video,
+canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 6. Make form elements inherit typography */
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Remove default link styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 8. Make buttons show a pointer */
+button {
+    cursor: pointer;
+}
+
+/* 9. Prevent long words from breaking the layout */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    overflow-wrap: break-word;
+}
+
+
+
 body{
   margin: 0;
   padding: 40px 24px;
@@ -128,7 +196,7 @@ body{
 .planet-description{
   opacity: 75%;
   color: #4B6A9B;
-  
-  
-  
 }
+
+
+
