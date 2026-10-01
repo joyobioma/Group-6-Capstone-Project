@@ -4,7 +4,7 @@
   --accent-color: #0079FF;
   --accent-light: #D1E3FF;
   --text-muted: #4B6A9B;
-  --text-primary: #53688a;
+  --text-primary: #000;
   --text-light: #FFFFFF;
   --btn-hover: #60ABFF;
 }
@@ -13,7 +13,7 @@
   /* dark theme */
   --background-primary: #141D2F;
   --background-secondary: #1E2A47;
-  --text-primary: #90A4D4;
+  --text-primary: #FFF;
   --accent-light: #90A4D4;
 }
 
