@@ -1,3 +1,23 @@
+:root{
+  --background-primary: #F6F8FF;
+  --background-secondary: #FFFFFF;
+  --accent-color: #0079FF;
+  --accent-light: #D1E3FF;
+  --text-muted: #4B6A9B;
+  --text-primary: #53688a;
+  --text-light: #FFFFFF;
+  --btn-hover: #60ABFF;
+}
+
+[data-theme="dark"] {
+  /* dark theme */
+  --background-primary: #141D2F;
+  --background-secondary: #1E2A47;
+  --text-primary: #90A4D4;
+  --accent-light: #90A4D4;
+}
+
+
 /* =========================
    CSS RESET
    ========================= */
@@ -72,7 +92,7 @@ p {
 body{
   margin: 0;
   padding: 40px 24px;
-  background-color: #F6F8FF;
+  background-color: var(--background-primary);
 }
 
 .page{
@@ -102,7 +122,7 @@ body{
   gap: 24px;
   margin-bottom: 10px;
   padding: 8px 12px 8px 24px;
-  background-color: #FFFFFF;
+  background-color: var(--background-secondary);
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 16px solid transparent;
@@ -124,8 +144,8 @@ body{
     height: 48px;
     padding: 12px 24px 12px 24px;
     border-radius: 10px;
-    background-color: #0079FF;
-    color: #FFFFFF;
+    background-color: var(--accent-color);
+    color: var(--text-light);
     border: none;
     cursor: pointer;
     gap: 10px;
@@ -134,11 +154,11 @@ body{
 
   & button:hover,
   & button:focus-visible{
-    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #0079ff;
+    box-shadow: 0 0 0 2px var(--text-light), 0 0 0 4px var(--accent-color);
   }
 
   & button:hover{
-    background-color: #60ABFF;
+    background-color: var(--btn-hover);
   }
 
   & img{
@@ -157,7 +177,7 @@ body{
   font-family: monospace, Georgia, 'Times New Roman', serif;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  background-color: #FFFFFF;
+  background-color: var(--background-secondary);
   border-radius: 16px;
   padding: 48px;
   gap: 32px;
@@ -168,14 +188,14 @@ body{
   font-weight: 25px;
   width: 108px;
   height: 24px;
-  color: #0079FF;
+  color: var(--accent-color);
 }
 
 .planet-details{
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  background-color: #F6F8FF;
+  background-color: var(--background-primary);
   border-radius: 10px;
   width: 480px;
   height: 85px;
@@ -195,8 +215,7 @@ body{
 
 .planet-description{
   opacity: 75%;
-  color: #4B6A9B;
+  color: var(--text-muted);
 }
-
 
 
