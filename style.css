@@ -152,7 +152,6 @@ header{
 
   & input{
     height: 25px;
-    gap: 20px;
     border: none;
     outline: none;
     flex: 1;
@@ -208,14 +207,11 @@ header{
     font-family: monospace, Georgia, 'Times New Roman', serif;
   }
 
-
   .planet-image{
     width: 117px;
     height: 117px;
     border-radius: 50%;
     align-self: start;
-    /* grid-row: 1 / span 4;
-    align-self: start; */
   }
 }
 
@@ -274,7 +270,6 @@ header{
 @media (min-width: 741px) {
   .planet-image {
     grid-row: 1 / span 4;
-    align-self: start;
   }
 }
 
