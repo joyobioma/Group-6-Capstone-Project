@@ -18,10 +18,10 @@
         <div>
           <img src="svg/logo_black.svg" alt="planet-home">
         </div>
-        <div>
-          <button id="theme-toggle" class="theme" type="button" aria-label="switch to dark theme"><span id="theme-label">DARK</span>
-          <span></span></button>
-        </div>
+        <button class="theme-switcher" type="button" aria-label="switch to dark theme">
+          <span>DARK</span>
+          <img src="svg/Theme Icon (1).svg" alt="Theme switcher icon">
+        </button>
       </div>
 
       <!-- search bar-->
@@ -35,31 +35,29 @@
 
       <!-- planet card -->
       <section class="planet-card">
-        <div>
-          <img src="images/Profile Picture.jpg" alt="">
-        </div>
-        <div>
-         <div>
-           <h1>Earth</h1>
+          <img src="images/Profile Picture.jpg" class="planet-image" alt="planet image">
+          <div class="planet-title">
+            <h1>Earth</h1>
             <p class="planet-type">Terrestrial</p>
-            <p class="planet-description">The only known planet to support   life, with liquid water on its surface.</p>
-         </div>
-         <div class="planet-details">
-          <div>
-            <div><p>Gravity</p></div>
-            <div><span>9.8</span></div>
           </div>
-          <div>
-            <div><p>Mass</p></div>
-            <div><span>0.00315</span></div>
-          </div>
-          <div>
-            <div><p>Period</p></div>
-            <div><span>365</span></div>
-          </div>
-         </div>
+        <p class="planet-description">The only known planet to support   life, with liquid water on its surface.</p>
 
-         <div class="planet-weather">
+          <div class="planet-details">
+            <div>
+              <p>Gravity</p>
+              <span>9.8</span>
+            </div>
+            <div>
+              <p>Mass</p>
+            <span>0.00315</span>
+            </div>
+            <div>
+              <p>Period</p>
+              <span>365</span>
+            </div>
+        </div>
+
+        <div class="planet-weather">
           <div class="planet-stats">
             <div><img src="svg/Temperature icon.svg" alt=""></div>
             <div><span>288</span></div>
@@ -78,7 +76,6 @@
             <div><img src="svg/Company Icon.svg" alt=""></div>
             <div><span>149.6</span></div>
           </div>
-         </div>
         </div>
       </section>
     </main>
