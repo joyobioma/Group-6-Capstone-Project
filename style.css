@@ -227,4 +227,7 @@ body{
   color: var(--text-muted);
 }
 
-
+.planetary-facts{
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  padding-top: 24px; 
+}
