@@ -231,3 +231,14 @@ body{
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   padding-top: 24px; 
 }
+
+
+@media (max-width: 600px) {
+  .planetary-source{
+    display: none;
+  }
+  .col-mass{
+    display:none;
+  }
+}
+
