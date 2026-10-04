@@ -229,8 +229,15 @@ body{
 
 .planetary-facts h2{
   font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 620;
   padding-top: 24px;
   color: var(--table-header-fill);
+}
+
+p{
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .planetary-facts > div p {
@@ -247,19 +254,49 @@ body{
   font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
+.planetary-facts tbody td {
+  text-align: center;
+}
+
+.planetary-facts tbody th[scope="rowgroup"] {
+  line-height: 1.4;
+}
+
 table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 16px;
-  background-color: var(--table-fill-dark);
   border: 1px solid #fff;
+  line-height: 2.5;
+}
+
+table th:nth-child(2),
+table th[scope="row"]:nth-child(2) {
+  width: 150px;
+}
+
+tbody th[scope="row"] {
+  font-weight: normal;
+  
+  background-color: #edf4fc;
+}
+
+tbody th[scope="rowgroup"] {
+  background-color: var(--table-fill-dark);
+  width: 120px;
+}
+
+tbody td {
+  background-color: #edf4fc;
 }
 
 caption {
   text-align: left;
+  font-size: 18px;
+  font-weight: 450;
   caption-side: top;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
   background-color: transparent;
 }
 
@@ -281,4 +318,12 @@ thead tr:first-child th:first-child {
 
 thead tr:first-child th:last-child {
   border-top-right-radius: 16px;
+}
+
+.planetary-facts tbody tr:last-child th:first-child {
+  border-bottom-left-radius: 16px;
+}
+
+.planetary-facts tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 16px;
 }
