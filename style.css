@@ -326,4 +326,18 @@ thead tr:first-child th:last-child {
 
 .planetary-facts tbody tr:last-child td:last-child {
   border-bottom-right-radius: 16px;
+
+
+@media (max-width: 600px) {
+  .planetary-source{
+    display: none;
+  }
+  .col-mass{
+    display:none;
+  }
 }
+
+.table-wrapper{
+  width: 100%;
+  overflow-x: auto;
+ }
