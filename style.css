@@ -293,7 +293,7 @@ tbody td {
 
 caption {
   text-align: left;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 450;
   caption-side: top;
   padding-bottom: 5px;
@@ -326,7 +326,7 @@ thead tr:first-child th:last-child {
 
 .planetary-facts tbody tr:last-child td:last-child {
   border-bottom-right-radius: 16px;
-
+}
 
 @media (max-width: 600px) {
   .planetary-source{
