@@ -103,6 +103,7 @@ body{
 }
 
 
+
 header{
   button,
   input{
@@ -156,6 +157,7 @@ header{
     outline: none;
     flex: 1;
     font-size: 18px;
+    background-color: transparent;
   }
 
   & button{
@@ -266,6 +268,29 @@ header{
 .planet-weather { 
   grid-column: 2;
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+  --background-primary: #141D2F;
+  --background-secondary: #1E2A47;
+  --text-primary: #FFFFFF;
+  --table-fill-dark: #90A4D4;
+}
+
+body.dark-mode .search {
+  background-color:var(--background-secondary);
+}
+
+body.dark-mode .planet-card {
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+}
+
+body.dark-mode .planet-details {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
 
 @media (min-width: 741px) {
   .planet-image {
