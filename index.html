@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!--Inter font added by Joy for the Planetary Facts Table -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,7 +31,7 @@
             <img src="svg/Search Icon.svg" alt="">
             <input type="search" placeholder="Search planet name">
             <button>Search</button>  
-       </div>
+       </div>  
     </header>
     <main>
 
@@ -78,6 +80,92 @@
           </div>
         </div>
       </section>
+
+       
+      <!-- planetary facts table -->
+       <section class="planetary-facts">
+        <div>
+        <h2>Planetary Facts at a Glance</h2>
+        <p>Below is a comparative table of major planets in our solar system. The data highlights key physical properties used by astronomers and researchers worldwide.</p>
+        </div>
+        
+        <div class="table-wrapper"> 
+        <table>
+          <caption> <strong>Data about the planets of our solar system
+             <span class="planetary-source">(Planetary facts taken from NASA)</span>
+            </strong></caption>
+
+          <thead>
+            <tr>
+              <th colspan="2"></th>
+              <th scope="col">Name</th>
+              <th scope="col" class="col-mass">Mass (10 24kg)</th>
+              <th scope="col">Diameter (km)</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="4" colspan="2">Terrestrial<br> Planets</th>
+              <th scope="row">Mercury</th>
+              <td class="col-mass">0.330</td>
+              <td>4,878</td>
+            </tr>
+
+            <tr>
+              <th scope="row">Venus</th>
+              <td class="col-mass">0.330</td>
+              <td>4,878</td>
+            </tr>
+
+            <tr>
+              <th scope="row">Earth</th>
+              <td class="col-mass">0.330</td>
+              <td>4,878</td>
+            </tr>
+
+             <tr>
+              <th scope="row">Mars</th>
+              <td class="col-mass">0.330</td>
+              <td>4,878</td>
+            </tr> 
+            
+            <tr>
+              <th scope="rowgroup" rowspan="4" >Jovian <br> Planets</th>
+              <th scope="rowgroup" rowspan="2" >Gas Giants</th>
+              <th scope="row">Jupiter</th>
+              <td class="col-mass">0.330</td>
+              <td>4,878</td>
+            </tr>
+            <tr>
+              <th scope="row">Saturn</th>
+              <td class="col-mass">0.330</td>
+              <td>4,878</td>
+            </tr>
+             
+            <tr>
+              <th scope="rowgroup" rowspan="2">Ice Giants</th>
+              <th scope="row" >Uranus</th>
+              <td class="col-mass">0.330</td>
+              <td>4,878</td>
+            </tr>
+
+            <tr>
+              <th scope="row">Neptune</th>
+              <td class="col-mass">0.330</td>
+              <td>4,878</td>
+            </tr>
+
+            <tr>
+              <th scope="rowgroup" colspan="2">Dwarf Planets</th>
+              <th scope="row">Pluto</th>
+              <td class="col-mass">0.330</td>  
+              <td>4,878</td>
+            </tr>                      
+          </tbody>
+        </table>
+        </div>
+       </section>   
     </main>
     <footer class="footer">
     <div class="footer-left">
