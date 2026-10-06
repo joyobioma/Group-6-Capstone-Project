@@ -362,6 +362,46 @@ thead tr:first-child th:last-child {
   border-bottom-right-radius: 16px;
 }
 
+/* Dark Mode Styles */
+body.dark-mode {
+  --background-primary: #141D2F;
+  --background-secondary: #1E2A47;
+  --text-primary: #FFFFFF;
+  --table-fill-dark: #90A4D4;
+  --text-secondary: #D1E3FF;
+  --table-text: #212121;
+  --table-data-bg:#F2F7FF;
+}
+
+body.dark-mode .planetary-facts h2 {
+    color: var(--text-primary);
+}
+
+body.dark-mode
+.planetary-facts > div p {
+ color: var(--table-fill-dark)
+}
+
+body.dark-mode strong {
+  color: var(--text-secondary);
+}
+
+body.dark-mode thead {
+ background-color: var(--background-primary); 
+ color: var(--text-secondary);
+}
+
+body.dark-mode tbody th[scope="rowgroup"] {
+background-color: var(--table-fill-dark);
+color: var(--table-text);
+}
+
+body.dark-mode tbody td {
+ background-color: var(--table-data-bg); 
+ color: var(--table-text);
+}
+
+
 @media (max-width: 600px) {
   .planetary-source{
     display: none;
