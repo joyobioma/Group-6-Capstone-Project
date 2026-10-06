@@ -112,7 +112,7 @@ header{
 
 .page{
   width: 730px;
-  margin: 130px auto;
+  margin: 10px auto;
 }
 
 .top{
@@ -216,7 +216,7 @@ header{
 }
 
 .planet-type{
-  width: 108px;
+  width: 109px;
   height: 24px;
   color: var(--accent-color);
 }
@@ -390,7 +390,7 @@ thead tr:first-child th:last-child {
 @media(max-width: 780px){
   .page{
     width: 100%;
-    margin: 40px auto;
+    margin: 5px auto;
   }
 
   .planet-card{
@@ -426,6 +426,8 @@ thead tr:first-child th:last-child {
   .planet-card{
     grid-template-columns: 70px 1fr; 
     padding: 16px;  
+    margin-inline: auto;
+    width: 100%;
 
     .planet-image {
       width: 70px;
