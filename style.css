@@ -129,7 +129,7 @@ body{
 header{
   button,
   input{
-    font-family: monospace, Georgia, 'Times New Roman', serif;
+    font-family: 'Space Mono', monospace;
   }
 }
 
@@ -216,6 +216,7 @@ header{
     flex: 1;
     font-size: 18px;
     background: transparent ;
+    
   }
 
   button{
