@@ -27,7 +27,7 @@
   --thead-text-color: #FFFFFF;
 }
 
-body.dark-mode {
+[data-theme="dark"],body.dark-mode {
   /* dark theme */
   --background-primary: #141D2F;      
   --background-secondary: #1E2A47;     
