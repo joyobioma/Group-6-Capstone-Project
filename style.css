@@ -362,6 +362,47 @@ thead tr:first-child th:last-child {
   border-bottom-right-radius: 16px;
 }
 
+
+
+/* Error message */
+
+#search-input::-webkit-search-cancel-button {
+  display: none;
+}
+
+#search-status {
+  color: var(--error);
+  font-size: 14px;
+  white-space: nowrap;
+  display: none;
+}
+
+.search-error {
+  color: var(--error);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.search-error[hidden] {
+  display: none;
+}
+
+.planet-card--error{
+  grid:none;
+  }
+
+.planet-card--error > *:not(.search-error) {
+  display: none;
+}
+
+.planet-card--error .search-error:not([hidden]) {
+  display: block;
+  color: var(--error);
+  width: 100%;
+}
+
+
+
 @media (max-width: 600px) {
   .planetary-source{
     display: none;
