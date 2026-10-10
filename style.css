@@ -27,7 +27,7 @@
   --thead-text-color: #FFFFFF;
 }
 
-[data-theme="dark"] {
+[data-theme="dark"],body.dark-mode {
   /* dark theme */
   --background-primary: #141D2F;      
   --background-secondary: #1E2A47;     
@@ -361,8 +361,11 @@ header{
 
   caption {
     text-align: left;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 450;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: var(--table-caption);
     caption-side: top;
     padding-bottom: 5px;
     background-color: transparent;
