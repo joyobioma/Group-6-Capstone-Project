@@ -16,6 +16,7 @@
   /* Table */
   --table-fill-dark: #D1E3FF;           /* Light blue for Category cells (Terrestrial, Jovian, Dwarf, Gas, Ice) */
   --table-header-fill: #164BAF;         /* Blue color: for table header (name, mass, diameter) fill */
+  --error: #F74646;
 }
 
 [data-theme="dark"] {
@@ -370,18 +371,25 @@ thead tr:first-child th:last-child {
   display: none;
 }
 
-#search-status {
-  color: var(--error);
-  font-size: 14px;
-  white-space: nowrap;
-  display: none;
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
 }
 
-.search-error {
+#search-status {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--error);
-  font-size: 0.875rem;
-  margin-top: 0.5rem;
+  font-weight: bold;
+  font-family: monospace, Georgia, 'Times New Roman', serif;
+  pointer-events: none;
+  white-space: nowrap;
+  font-size: 1.2rem;
 }
+
+
 
 .search-error[hidden] {
   display: none;
@@ -397,10 +405,26 @@ thead tr:first-child th:last-child {
 
 .planet-card--error .search-error:not([hidden]) {
   display: block;
-  color: var(--error);
-  width: 100%;
+  font-family: monospace, Georgia, 'Times New Roman', serif;
+
 }
 
+
+.search-error h2 {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  color:#2B3442;
+  text-align: center;
+}
+
+.search-error p {
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #697C9A;
+  
+}
 
 
 @media (max-width: 600px) {
