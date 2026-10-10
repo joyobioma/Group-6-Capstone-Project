@@ -25,6 +25,27 @@
         </button>
       </div>
       <!-- search bar-->
+      <div class="search">
+      <img src="svg/Search Icon.svg" alt="">
+        <div class="search-input-wrapper">
+      <input type="search" id="search-input" placeholder="Search planet name" aria-describedby="search-error"> 
+      <span id="search-status" hidden></span>
+      </div>
+      <button type="button" id="search-btn">Search</button>
+    </div>
+    </header>
+    
+    <main>
+      <!-- planet card -->
+      <section class="planet-card">
+            <p class="search-error" id="search-error" role="alert" hidden></p>
+
+          <img src="images/Profile Picture.jpg" class="planet-image" alt="planet image">
+          <div class="planet-title">
+            <h1>Earth</h1>
+            <p class="planet-type">Terrestrial</p>
+          </div>
+        <p class="planet-description">The only known planet to support   life, with liquid water on its surface.</p>
       <form class="search">
         <img src="svg/Search Icon.svg" alt="">
         <input type="search" placeholder="Search planet name">
