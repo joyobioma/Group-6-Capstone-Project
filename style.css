@@ -444,7 +444,7 @@ header{
   width: 45%;
   flex-shrink: 0;
   min-width: 0;
-  padding-top: 16px;
+  padding-top: 0px;
 }
 
 .footer-left {
@@ -452,6 +452,15 @@ header{
   flex-shrink: 0;
   min-width: 0; 
   line-height: 1.2;
+
+  h2 {
+    margin: 0 0 25px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+  
 }
 
 @media(max-width: 740px){
