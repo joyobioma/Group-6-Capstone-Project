@@ -12,20 +12,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="page">
     <header>
       <!-- header -->
       <div class="top">
-        <div>
-          <img src="svg/logo_black.svg" alt="planet-home">
-        </div>
-        <button class="theme-switcher" type="button" aria-label="switch to dark theme">
+        <img src="svg/logo_black.svg" alt="planet">
+        <button type="button" aria-label="switch to dark theme">
           <span>DARK</span>
-          <img src="svg/Theme Icon (1).svg" alt="Theme switcher icon">
+          <img src="svg/Theme Icon (1).svg" alt="">
         </button>
       </div>
-
       <!-- search bar-->
       <div class="search">
       <img src="svg/Search Icon.svg" alt="">
@@ -48,143 +46,168 @@
             <p class="planet-type">Terrestrial</p>
           </div>
         <p class="planet-description">The only known planet to support   life, with liquid water on its surface.</p>
+      <form class="search">
+        <img src="svg/Search Icon.svg" alt="">
+        <input type="search" placeholder="Search planet name">
+        <button type="submit">Search</button>  
+      </form>  
+    </header>
 
-          <div class="planet-details">
-            <div>
-              <p>Gravity</p>
-              <span>9.8</span>
-            </div>
-            <div>
-              <p>Mass</p>
+    <main>
+      <!-- planet card -->
+      <section class="planet-card">
+        <img src="images/Profile Picture.jpg" class="planet-image" alt="Earth">
+
+        <div>
+          <h1>Earth</h1>
+          <p class="planet-type">Terrestrial</p>
+        </div>
+
+        <p class="planet-description">The only known planet to support life, with liquid water on its surface.</p>
+
+        <div class="planet-details">
+          <div>
+            <p>Gravity</p>
+            <span>9.8</span>
+          </div>
+
+          <div>
+            <p>Mass</p>
             <span>0.00315</span>
-            </div>
-            <div>
-              <p>Period</p>
-              <span>365</span>
-            </div>
+          </div>
+
+          <div>
+            <p>Period</p>
+            <span>365</span>
+          </div>
         </div>
 
         <div class="planet-weather">
           <div class="planet-stats">
-            <div><img src="svg/Temperature icon.svg" alt=""></div>
-            <div><span>288</span></div>
-          </div>
-          <div class="planet-stats">
-            <div><img src="svg/Half moon.svg"></div>
-            <div><span>1</span></div>
-          </div>
-          
-          <div class="planet-stats">
-            <div><img src="svg/Diameter.svg" alt=""></div>
-            <div><span>12756</span></div>
+            <img src="svg/Temperature icon.svg" alt="">
+            <span>288</span>
           </div>
 
           <div class="planet-stats">
-            <div><img src="svg/Company Icon.svg" alt=""></div>
-            <div><span>149.6</span></div>
+            <img src="svg/Half moon.svg" alt="">
+            <span>1</span>
+          </div>
+          
+          <div class="planet-stats">
+            <img src="svg/Diameter.svg" alt="">
+            <span>12756</span>
+          </div>
+
+          <div class="planet-stats">
+            <img src="svg/Company Icon.svg" alt="">
+            <span>149.6</span>
           </div>
         </div>
       </section>
 
-       
-      <!-- planetary facts table -->
-       <section class="planetary-facts">
+        <!-- planetary facts table -->
+      <section class="planetary-facts">
         <div>
-        <h2>Planetary Facts at a Glance</h2>
-        <p>Below is a comparative table of major planets in our solar system. The data highlights key physical properties used by astronomers and researchers worldwide.</p>
+          <h2>Planetary Facts at a Glance</h2>
+          <p>Below is a comparative table of major planets in our solar system. The data highlights key physical properties used by astronomers and researchers worldwide.</p>
         </div>
         
         <div class="table-wrapper"> 
-        <table>
-          <caption> <strong>Data about the planets of our solar system
-             <span class="planetary-source">(Planetary facts taken from NASA)</span>
-            </strong></caption>
+          <table>
+            <caption>
+              <b>Data about the planets of our solar system
+                <span class="planetary-source">(Planetary facts taken from NASA)</span>
+              </b>
+            </caption>
 
-          <thead>
-            <tr>
-              <th colspan="2"></th>
-              <th scope="col">Name</th>
-              <th scope="col" class="col-mass">Mass (10 24kg)</th>
-              <th scope="col">Diameter (km)</th>
-            </tr>
-          </thead>
+            <thead>
+              <tr>
+                <th colspan="2"></th>
+                <th scope="col">Name</th>
+                <th scope="col" class="col-mass">Mass (10 24kg)</th>
+                <th scope="col">Diameter (km)</th>
+              </tr>
+            </thead>
 
-          <tbody>
-            <tr>
-              <th scope="rowgroup" rowspan="4" colspan="2">Terrestrial<br> Planets</th>
-              <th scope="row">Mercury</th>
-              <td class="col-mass">0.330</td>
-              <td>4,878</td>
-            </tr>
+            <tbody>
+              <tr>
+                <th scope="rowgroup" rowspan="4" colspan="2">Terrestrial <br> Planets</th>
+                <th scope="row">Mercury</th>
+                <td class="col-mass">0.330</td>
+                <td>4,878</td>
+              </tr>
 
-            <tr>
-              <th scope="row">Venus</th>
-              <td class="col-mass">0.330</td>
-              <td>4,878</td>
-            </tr>
+              <tr>
+                <th scope="row">Venus</th>
+                <td class="col-mass">0.330</td>
+                <td>4,878</td>
+              </tr>
 
-            <tr>
-              <th scope="row">Earth</th>
-              <td class="col-mass">0.330</td>
-              <td>4,878</td>
-            </tr>
+              <tr>
+                <th scope="row">Earth</th>
+                <td class="col-mass">0.330</td>
+                <td>4,878</td>
+              </tr>
 
-             <tr>
-              <th scope="row">Mars</th>
-              <td class="col-mass">0.330</td>
-              <td>4,878</td>
-            </tr> 
-            
-            <tr>
-              <th scope="rowgroup" rowspan="4" >Jovian <br> Planets</th>
-              <th scope="rowgroup" rowspan="2" >Gas Giants</th>
-              <th scope="row">Jupiter</th>
-              <td class="col-mass">0.330</td>
-              <td>4,878</td>
-            </tr>
-            <tr>
-              <th scope="row">Saturn</th>
-              <td class="col-mass">0.330</td>
-              <td>4,878</td>
-            </tr>
-             
-            <tr>
-              <th scope="rowgroup" rowspan="2">Ice Giants</th>
-              <th scope="row" >Uranus</th>
-              <td class="col-mass">0.330</td>
-              <td>4,878</td>
-            </tr>
+              <tr>
+                <th scope="row">Mars</th>
+                <td class="col-mass">0.330</td>
+                <td>4,878</td>
+              </tr> 
+              
+              <tr>
+                <th scope="rowgroup" rowspan="4" >Jovian <br> Planets</th>
+                <th scope="rowgroup" rowspan="2" >Gas Giants</th>
+                <th scope="row">Jupiter</th>
+                <td class="col-mass">0.330</td>
+                <td>4,878</td>
+              </tr>
 
-            <tr>
-              <th scope="row">Neptune</th>
-              <td class="col-mass">0.330</td>
-              <td>4,878</td>
-            </tr>
+              <tr>
+                <th scope="row">Saturn</th>
+                <td class="col-mass">0.330</td>
+                <td>4,878</td>
+              </tr>
+                
+              <tr>
+                <th scope="rowgroup" rowspan="2">Ice Giants</th>
+                <th scope="row" >Uranus</th>
+                <td class="col-mass">0.330</td>
+                <td>4,878</td>
+              </tr>
 
-            <tr>
-              <th scope="rowgroup" colspan="2">Dwarf Planets</th>
-              <th scope="row">Pluto</th>
-              <td class="col-mass">0.330</td>  
-              <td>4,878</td>
-            </tr>                      
-          </tbody>
-        </table>
+              <tr>
+                <th scope="row">Neptune</th>
+                <td class="col-mass">0.330</td>
+                <td>4,878</td>
+              </tr>
+
+              <tr>
+                <th scope="rowgroup" colspan="2">Dwarf Planets</th>
+                <th scope="row">Pluto</th>
+                <td class="col-mass">0.330</td>  
+                <td>4,878</td>
+              </tr>                      
+            </tbody>
+          </table>
         </div>
-       </section>   
+      </section>   
     </main>
-    <footer class="footer">
-    <div class="footer-left">
-        <h3>About</h3>
-        <p>Names of group members are Joy, Mercy, Tayo, Isaiah, Quadri, Callistus, Victoria, Tolulope, Oluwaferanmi, Benedict, Abolaji and Emmanuel.</p>
-    </div>
 
-    <div class="footer-right">
-        <p>©2026 Design by <a href="https://www.amakandukwu.com">Amaka N</a></p>
-        <p>Built by <a href="https://github.com/joyobioma/Group-6-Capstone-Project">Frontend Development Capstone-Group 6</a>. All rights reserved</p>
-        <p><a href="https://tsacademyonline.com">TSAcademy</a></p>
-    </div>
+    <footer class="footer">
+      <div class="footer-left">
+          <h2>About</h2>
+          <p>Names of group members are Joy, Mercy, Tayo, Isaiah, Quadri, Callistus, Victoria, Tolulope, Oluwaferanmi, Benedict, Abolaji and Emmanuel.</p>
+      </div>
+
+      <div class="footer-right">
+          <p>©2026 Design by <a href="https://www.amakandukwu.com">Amaka N</a></p>
+          <p>Built by <a href="https://github.com/joyobioma/Group-6-Capstone-Project">Frontend Development Capstone-Group 6</a>. All rights reserved</p>
+          <p><a href="https://tsacademyonline.com">TSAcademy</a></p>
+      </div>
     </footer>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
