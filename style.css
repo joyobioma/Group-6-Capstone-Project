@@ -135,7 +135,7 @@ header{
 
 .page{
   width: 730px;
-  margin: 130px auto;
+  margin: 100px auto;
 
   @media(max-width: 780px){
       padding: 40px 16px;
@@ -224,6 +224,7 @@ header{
     height: 48px;
     padding: 12px 24px;
     border-radius: 10px;
+    font-size: 16px;
     background-color: var(--accent-color);
     color: var(--text-light);
     border: none;
@@ -295,6 +296,7 @@ header{
     
     p{
       margin-bottom: 4px;
+      letter-spacing: 1px;
     }
 
     span{
