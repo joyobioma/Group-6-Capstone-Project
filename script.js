@@ -1,4 +1,3 @@
-// JavaScript functionality will be added in the next phase.
 const themeToggle = document.querySelector("#theme-toggle");
 const themeLabel = document.querySelector("#theme-label");
 const themeIcon = document.querySelector("#theme-icon");
