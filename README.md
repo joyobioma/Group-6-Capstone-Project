@@ -14,10 +14,10 @@ The project also includes interactive features and responsive design so that it 
 * Mercy Yakubu ( Assistant Team Lead) - https://github.com/Mercyaksss
 * Temitayo Oyekanmi - https://github.com/temikanmi-ops
 * Isaiah Adebayo - https://github.com/ZahYah
-* Quadri - https://github.com/quadri-101
+* Alabi Quadri - https://github.com/quadri-101
 * Callistus Callistus - https://github.com/gentlekhally
 * Victoria Akinlolu - https://github.com/webquilldev
-* Tolulope - https://github.com/Tolulope8
+* Tolulope Ebode - https://github.com/Tolulope8
 * Afolabi Oluwaferanmi - https://github.com/oluwaferanmi007 
 * Benedict Okeh - https://github.com/AskBenSantos
 * Abolaji Usman - https://github.com/Jayprince-max
@@ -60,7 +60,7 @@ The JavaScript phase adds functionality to the website and connects the interfac
 
 * Afolabi Oluwaferanmi — Retrieves planet data from the API.
 * Temitayo Oyekanmi — Connects the fetched data to the appropriate HTML elements and displays the corresponding planetary information.
-* Tolulope — Implements searching by planet name and connects search input to the displayed planet information.
+* Tolulope Ebode — Implements searching by planet name and connects search input to the displayed planet information.
 * Isaiah Adebayo — Handles invalid search queries and displays appropriate feedback when a planet cannot be found.
 * Benedict Okeh — Implements the light and dark theme switch, including saving the selected theme using local storage.
 * Abolaji Usman — Tests the implemented features, checks that they work together, and reports bugs.
