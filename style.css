@@ -27,7 +27,7 @@
   --thead-text-color: #FFFFFF;
 }
 
-[data-theme="dark"] {
+[data-theme="dark"],body.dark-mode {
   /* dark theme */
   --background-primary: #141D2F;      
   --background-secondary: #1E2A47;     
@@ -35,7 +35,7 @@
   --accent-color: #0079FF; 
   --accent-btn-hover: #60ABFF;  
 
-  --accent-deep: #164BAF;
+  --accent-deep: #FFFFFF;
   --text-light: #FFFFFF;
   --text-muted: #4B6A9B;     
   --text-primary: #FFFFFF;   
@@ -50,6 +50,21 @@
   --table-fill-dark: #90A4D4;
   --table-header-fill: #141D2F;
   --thead-text-color: #D1E3FF;
+}
+body.dark-mode .planet-stats img{
+  filter: brightness(0) invert(1);
+}
+
+body.dark-mode .planet-card h1{
+  color: var(--text-primary);
+}
+
+body.dark-mode .planet-weather{
+  color: var(--text-primary);
+}
+
+body.dark-mode .search input{
+  color: var(--text-primary);
 }
 
 /* =========================
@@ -135,7 +150,7 @@ header{
 
 .page{
   width: 730px;
-  margin: 130px auto;
+  margin: 100px auto;
 
   @media(max-width: 780px){
       padding: 40px 16px;
@@ -224,6 +239,7 @@ header{
     height: 48px;
     padding: 12px 24px;
     border-radius: 10px;
+    font-size: 16px;
     background-color: var(--accent-color);
     color: var(--text-light);
     border: none;
@@ -295,6 +311,7 @@ header{
     
     p{
       margin-bottom: 4px;
+      letter-spacing: 1px;
     }
 
     span{
@@ -361,8 +378,11 @@ header{
 
   caption {
     text-align: left;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 450;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: var(--table-caption);
     caption-side: top;
     padding-bottom: 5px;
     background-color: transparent;
