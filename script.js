@@ -54,6 +54,8 @@ async function fetchPlanets() {
     return [];
   }
 }
+document.addEventListener("DOMContentLoaded", fetchPlanets);
+
 const themeToggle = document.querySelector("#theme-toggle");
 const themeLabel = document.querySelector("#theme-label");
 const themeIcon = document.querySelector("#theme-icon");
