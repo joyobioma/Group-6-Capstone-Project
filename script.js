@@ -80,3 +80,78 @@ if (document.body.classList.contains("dark-mode")){
   localStorage.setItem("theme", "light");
 }
 });
+
+  
+/* =========================================
+   PLANET SEARCH — Tolulope
+   Branch: feature/planet-search
+   ========================================= */
+
+// Use the existing search elements declared earlier in script.js:
+// searchInput, searchBtn, errorEl, searchStatus
+// Reuse planetsData and displayPlanet() from the shared code.
+
+function handlePlanetSearch(event) {
+  event.preventDefault();
+
+  const searchName = searchInput.value.trim().toLowerCase();
+
+  // Clear previous search errors
+  if (errorEl) {
+    errorEl.textContent = "";
+    errorEl.hidden = true;
+  }
+
+  if (searchStatus) {
+    searchStatus.textContent = "";
+    searchStatus.hidden = true;
+  }
+
+  // Validate the search input
+  if (!searchName) {
+    showSearchError("Please enter a planet name.");
+    return;
+  }
+
+  // Search the data already retrieved from the API
+  const selectedPlanet = planetsData.find(
+    planet =>
+      typeof planet.name === "string" &&
+      planet.name.trim().toLowerCase() === searchName
+  );
+
+  if (selectedPlanet) {
+    // Use the existing display functionality
+    displayPlanet(selectedPlanet);
+  } else {
+    showSearchError(
+      "Planet not found. Please enter a valid planet name."
+    );
+  }
+}
+
+// Display search error messages using the existing HTML
+function showSearchError(message) {
+  if (errorEl) {
+    errorEl.textContent = message;
+    errorEl.hidden = false;
+  }
+
+  if (searchStatus) {
+    searchStatus.textContent = "!";
+    searchStatus.hidden = false;
+  }
+}
+
+// Search when the user presses Enter
+const searchForm = document.querySelector(".search");
+
+if (searchForm) {
+  searchForm.addEventListener("submit", handlePlanetSearch);
+}
+
+// Search when the user clicks the Search button
+if (searchBtn) {
+  searchBtn.addEventListener("click", handlePlanetSearch);
+}
+
