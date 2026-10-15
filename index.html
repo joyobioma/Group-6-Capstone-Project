@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
   <div class="page">
     <header>
@@ -29,17 +30,21 @@
       <!-- search bar-->
       <form class="search">
         <img src="svg/Search Icon.svg" alt="">
-        <input type="search" placeholder="Search planet name">
-        <button type="submit">Search</button>  
+        <div class="search-input-wrapper">
+        <input type="search" placeholder="Search planet name" id="search-input">
+         <span id="search-status" hidden></span>
+         </div>
+        <button type="button" id="search-btn">Search</button>  
       </form>  
     </header>
 
     <main>
       <!-- planet card -->
       <section class="planet-card">
+          <p class="search-error" id="search-error" role="alert" hidden></p>
         <img src="images/Profile Picture.jpg" class="planet-image" alt="Earth">
 
-        <div>
+        <div class="planet-title">
           <h1>Earth</h1>
           <p class="planet-type">Terrestrial</p>
         </div>
