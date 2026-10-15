@@ -1,3 +1,61 @@
+
+
+const PLANET_API_URL =
+  "https://anurella.github.io/json/planet.json";
+
+let planetsData = [];
+
+
+async function fetchPlanets() {
+  try {
+    const response = await fetch(PLANET_API_URL);
+
+    
+    if (!response.ok) {
+      throw new Error(
+        "Request failed: " +
+        response.status + " "+
+        response.statusText
+      );
+    }
+
+    
+    const data = await response.json();
+
+    
+    if (!Array.isArray(data) || data.length === 0) {
+      throw new Error("The API did not return a valid planet array.");
+    }
+
+    
+    planetsData = data;
+
+    console.log("Planet data fetched successfully:", planetsData);
+
+    
+    document.dispatchEvent(
+      new CustomEvent("planetsLoaded", {
+        detail: planetsData
+      })
+    );
+
+    return planetsData;
+
+  } catch (error) {
+    console.error("Planet API error:", error);
+
+    
+    document.dispatchEvent(
+      new CustomEvent("planetsLoadError", {
+        detail: error.message
+      })
+    );
+
+    return [];
+  }
+}
+document.addEventListener("DOMContentLoaded", fetchPlanets);
+
 const themeToggle = document.querySelector("#theme-toggle");
 const themeLabel = document.querySelector("#theme-label");
 const themeIcon = document.querySelector("#theme-icon");
