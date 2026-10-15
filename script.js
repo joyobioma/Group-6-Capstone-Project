@@ -5,33 +5,56 @@ const PLANET_API_URL = "https://anurella.github.io/json/planet.json";
 let planetsData = [];
 
 // Fetch planet information from the API
+
 async function fetchPlanets() {
   try {
     const response = await fetch(PLANET_API_URL);
 
     if (!response.ok) {
-      throw new Error("Failed to fetch planet data");
+      throw new Error(
+        "Request failed: " +
+        response.status + " " +
+        response.statusText
+      );
     }
 
     const data = await response.json();
+
+    if (!Array.isArray(data) || data.length === 0) {
+      throw new Error("The API did not return a valid planet array.");
+    }
+
     planetsData = data;
 
     console.log("Planet data fetched successfully:", planetsData);
 
     // Display Earth when the page first loads
     const earth = planetsData.find(
-      planet => planet.name.toLowerCase() === "earth"
+      planet => planet.name?.toLowerCase() === "earth"
     );
 
     if (earth) {
       displayPlanet(earth);
       console.log("Earth data from API:", earth);
-    } else if (planetsData.length > 0) {
+    } else {
       displayPlanet(planetsData[0]);
     }
 
+    // Notify other JavaScript functionality that the data is ready
+    document.dispatchEvent(
+      new CustomEvent("planetsLoaded", {
+        detail: planetsData
+      })
+    );
+
   } catch (error) {
-    console.error("Error fetching planet data:", error);
+    console.error("Planet API error:", error);
+
+    document.dispatchEvent(
+      new CustomEvent("planetsLoadError", {
+        detail: error.message
+      })
+    );
   }
 }
 
@@ -109,7 +132,7 @@ if (searchForm) {
     const searchName = searchInput.value.trim().toLowerCase();
 
     const selectedPlanet = planetsData.find(
-      planet => planet.name.toLowerCase() === searchName
+      planet => planet.name?.toLowerCase() === searchName
     );
 
     if (selectedPlanet) {
