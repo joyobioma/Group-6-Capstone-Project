@@ -55,7 +55,7 @@ body.dark-mode .planet-stats img{
   filter: brightness(0) invert(1);
 }
 
-body.dark-mode .planet-card h1{
+body.dark-mode .planet-card h1, body.dark-mode .search-error h2{
   color: var(--text-primary);
 }
 
@@ -67,6 +67,9 @@ body.dark-mode .search input{
   color: var(--text-primary);
 }
 
+body.dark-mode .searh-error p {
+  color: var(--table-fill-dark)
+}
 /* =========================
    CSS RESET
    ========================= */
