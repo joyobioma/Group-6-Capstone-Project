@@ -18,7 +18,7 @@
   --planetary-facts-p: #0F2A44;   
   --table-caption: #0F2A44;
   --planet-det-text: #4B6A9B;
-  
+  --error: #F74646;
 
   /* Table */
   --table-fill-light: #edf4fc;
@@ -27,7 +27,7 @@
   --thead-text-color: #FFFFFF;
 }
 
-[data-theme="dark"] {
+[data-theme="dark"],body.dark-mode {
   /* dark theme */
   --background-primary: #141D2F;      
   --background-secondary: #1E2A47;     
@@ -35,7 +35,7 @@
   --accent-color: #0079FF; 
   --accent-btn-hover: #60ABFF;  
 
-  --accent-deep: #164BAF;
+  --accent-deep: #FFFFFF;
   --text-light: #FFFFFF;
   --text-muted: #4B6A9B;     
   --text-primary: #FFFFFF;   
@@ -51,7 +51,25 @@
   --table-header-fill: #141D2F;
   --thead-text-color: #D1E3FF;
 }
+body.dark-mode .planet-stats img{
+  filter: brightness(0) invert(1);
+}
 
+body.dark-mode .planet-card h1, body.dark-mode .search-error h2{
+  color: var(--text-primary);
+}
+
+body.dark-mode .planet-weather{
+  color: var(--text-primary);
+}
+
+body.dark-mode .search input{
+  color: var(--text-primary);
+}
+
+body.dark-mode .searh-error p {
+  color: var(--table-fill-dark)
+}
 /* =========================
    CSS RESET
    ========================= */
@@ -135,7 +153,7 @@ header{
 
 .page{
   width: 730px;
-  margin: 130px auto;
+  margin: 100px auto;
 
   @media(max-width: 780px){
       padding: 40px 16px;
@@ -224,6 +242,7 @@ header{
     height: 48px;
     padding: 12px 24px;
     border-radius: 10px;
+    font-size: 16px;
     background-color: var(--accent-color);
     color: var(--text-light);
     border: none;
@@ -295,6 +314,7 @@ header{
     
     p{
       margin-bottom: 4px;
+      letter-spacing: 1px;
     }
 
     span{
@@ -361,8 +381,11 @@ header{
 
   caption {
     text-align: left;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 450;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: var(--table-caption);
     caption-side: top;
     padding-bottom: 5px;
     background-color: transparent;
@@ -563,4 +586,61 @@ header{
     }
   }
 }
- 
+ #search-input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+#search-status {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--error);
+  font-weight: bold;
+  font-family: monospace, Georgia, 'Times New Roman', serif;
+  pointer-events: none;
+  white-space: nowrap;
+  font-size: 1.2rem;
+}
+
+
+
+.search-error[hidden] {
+  display: none;
+}
+
+.planet-card--error{
+  grid:none;
+  }
+
+.planet-card--error > *:not(.search-error) {
+  display: none;
+}
+
+.planet-card--error .search-error:not([hidden]) {
+  display: block;
+  font-family: monospace, Georgia, 'Times New Roman', serif;
+
+}
+
+
+.search-error h2 {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  color:#2B3442;
+  text-align: center;
+}
+
+.search-error p {
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #697C9A;
+  
+}
