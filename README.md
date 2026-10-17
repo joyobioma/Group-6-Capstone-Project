@@ -22,6 +22,7 @@ The project also includes interactive features and responsive design so that it 
 * Benedict Okeh - https://github.com/AskBenSantos
 * Abolaji Usman - https://github.com/Jayprince-max
 * Emmanuel Oguntukesi - Https://github.com/OguntukesiE
+* Akuenu Chibuikem -https://github.com/lollipop1408
 
 ### Task Distribution
 
@@ -68,6 +69,10 @@ The JavaScript phase adds functionality to the website and connects the interfac
 * Joy Obioma — Coordinates the team, monitors progress, reviews contributions, and helps ensure the different components work together.
 
 **API:** https://anurella.github.io/json/planet.json
+
+
+* Akuenu Chibuikem - Responsible for deploying the website using Netlify and testing the live website on desktop and mobile, and sharing the deployment link with the team lead.
+
 
 ### How To Run The Project Locally
 
