@@ -85,5 +85,16 @@ The JavaScript phase adds functionality to the website and connects the interfac
 
 An internet connection is required to retrieve planet data from the external API.
 
+
+
+**Design Considerations**
+
+During development, the team identified differences between the light and dark modes in the implemented website:
+
+* Planetary source: Hidden in light mode but visible in dark mode.
+* Header content: Light mode displays “Repos” “Following” and “Followers,” while dark mode displays Mass, Gravity, and Period.
+
+These differences were noted during the review of the implemented design against the Figma mockup.
+
 ### Live Deployment
 The live deployment link will be added once the project has been completed and deployed.
