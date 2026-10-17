@@ -22,6 +22,7 @@ The project also includes interactive features and responsive design so that it 
 * Benedict Okeh - https://github.com/AskBenSantos
 * Abolaji Usman - https://github.com/Jayprince-max
 * Emmanuel Oguntukesi - Https://github.com/OguntukesiE
+* Akuenu Chibuikem -https://github.com/lollipop1408
 
 ### Task Distribution
 
@@ -69,6 +70,10 @@ The JavaScript phase adds functionality to the website and connects the interfac
 
 **API:** https://anurella.github.io/json/planet.json
 
+
+* Akuenu Chibuikem - Responsible for deploying the website using Netlify and testing the live website on desktop and mobile, and sharing the deployment link with the team lead.
+
+
 ### How To Run The Project Locally
 
 1. Clone the repository from GitHub.
@@ -79,6 +84,17 @@ The JavaScript phase adds functionality to the website and connects the interfac
 6. The website will open in your browser.
 
 An internet connection is required to retrieve planet data from the external API.
+
+
+
+**Design Considerations**
+
+During development, the team identified differences between the light and dark modes in the implemented website:
+
+* Planetary source: Hidden in light mode but visible in dark mode.
+* Header content: Light mode displays “Repos” “Following” and “Followers,” while dark mode displays Mass, Gravity, and Period.
+
+These differences were noted during the review of the implemented design against the Figma mockup.
 
 ### Live Deployment
 The live deployment link will be added once the project has been completed and deployed.
