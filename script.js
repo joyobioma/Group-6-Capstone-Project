@@ -1,64 +1,3 @@
-// Display a planet's information on the page
-function displayPlanet(planet) {
-  // Update planet name
-  const planetName = document.querySelector(".planet-card h1");
-
-  if (planetName) {
-    planetName.textContent = planet.name || "Unknown planet";
-  }
-
-  // Update planet image
-  const planetImage = document.querySelector(".planet-image");
-
-  if (planetImage) {
-    planetImage.src = planet.image || "";
-    planetImage.alt = planet.name || "Planet";
-  }
-
-  // Update planet type
-  const planetType = document.querySelector(".planet-type");
-
-  if (planetType) {
-    planetType.textContent = planet.type || "Not available";
-  }
-
-  // Update planet description
-  const planetDescription = document.querySelector(".planet-description");
-
-  if (planetDescription) {
-    planetDescription.textContent =
-      planet.description || "Description not available.";
-  }
-
-  // Update gravity, mass, and orbital period
-  const detailValues = document.querySelectorAll(".planet-details div span");
-
-  const details = [
-    planet.gravity,
-    planet.mass,
-    planet.period
-  ];
-
-  detailValues.forEach((element, index) => {
-    element.textContent = details[index] ?? "Not available";
-  });
-
-  // Update temperature, moons, diameter, and distance from the Sun
-  const weatherValues = document.querySelectorAll(".planet-weather .planet-stats span");
-
-  const weather = [
-    planet.temperature,
-    planet.moons,
-    planet.diameter,
-    planet.distanceFromSun
-  ];
-
-  weatherValues.forEach((element, index) => {
-    element.textContent = weather[index] ?? "Not available";
-  });
-}
-
-
 const PLANET_API_URL =
   "https://anurella.github.io/json/planet.json";
 
@@ -115,11 +54,79 @@ async function fetchPlanets() {
     return [];
   }
 }
+
+function withDecimal(value) {
+  if (value === null || value === undefined) return "Not available";
+  return Number.isInteger(value) ? value.toFixed(1) : String(value);
+}
+
+// Display a planet's information on the page
+function displayPlanet(planet) {
+  // Update planet name
+  const planetName = document.querySelector(".planet-card h1");
+
+  if (planetName) {
+    planetName.textContent = planet.name || "Unknown planet";
+  }
+
+  // Update planet image
+  const planetImage = document.querySelector(".planet-image");
+
+  if (planetImage) {
+    planetImage.src = planet.image || "";
+    planetImage.alt = planet.name || "Planet";
+  }
+
+  // Update planet type
+  const planetType = document.querySelector(".planet-type");
+
+  if (planetType) {
+    planetType.textContent = planet.type || "Not available";
+  }
+
+  // Update planet description
+  const planetDescription = document.querySelector(".planet-description");
+
+  if (planetDescription) {
+    planetDescription.textContent =
+      planet.description || "Description not available.";
+  }
+
+  // Update gravity, mass, and orbital period
+  const detailValues = document.querySelectorAll(".planet-details div span");
+
+  const details = [
+    withDecimal(planet.gravity),
+    withDecimal(planet.mass),
+    planet.period
+  ];
+
+  detailValues.forEach((element, index) => {
+    element.textContent = details[index] ?? "Not available";
+  });
+
+  // Update temperature, moons, diameter, and distance from the Sun
+  const weatherValues = document.querySelectorAll(".planet-weather .planet-stats span");
+
+  const weather = [
+    planet.temperature,
+    planet.moons,
+    planet.diameter,
+    planet.distanceFromSun
+  ];
+
+  weatherValues.forEach((element, index) => {
+    element.textContent = weather[index] ?? "Not available";
+  });
+}
+
+
 document.addEventListener("planetsLoaded", (event) => {
   const planets = event.detail;
   const earth = planets.find(p => p.name?.toLowerCase() === "earth");
   displayPlanet(earth || planets[0]);
 });
+
 // ========================================
 // SEARCH ELEMENTS
 // ========================================
@@ -153,10 +160,7 @@ document.addEventListener("planetsLoadError", (event) => {
   dataLoaded = false;
 
   searchStatus.hidden = true;
-
-  showError(
-    "<p>Unable to load planet data. Please try again later.</p>"
-  );
+  clearError(); 
 
   console.error("Unable to load planets:", event.detail);
 });
@@ -192,6 +196,7 @@ function showDefaultPage() {
 
 function handleSearch() {
   const query = searchInput.value.trim().toLowerCase();
+  document.activeElement.blur();
 
   if (!query) {
     searchStatus.hidden = true;
@@ -308,9 +313,6 @@ if (document.readyState === "loading") {
   fetchPlanets();
 }
 
-
-
-
 // Dark Theme Functionality
 const themeToggle = document.querySelector("#theme-toggle");
 const themeLabel = document.querySelector("#theme-label");
@@ -339,4 +341,15 @@ if (document.body.classList.contains("dark-mode")){
 }
 });
 
-  
+const detailLabels = document.querySelectorAll(".planet-details div p");
+const defaultLabels = ["Gravity", "Mass", "Period"];
+const activeLabels = ["Repos", "Followers", "Following"];
+
+function setLabels(labels) {
+  detailLabels.forEach((el, i) => {
+    el.textContent = labels[i];
+  });
+}
+
+searchInput.addEventListener("focus", () => setLabels(activeLabels));
+searchInput.addEventListener("blur", () => setLabels(defaultLabels));

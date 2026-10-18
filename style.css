@@ -25,6 +25,8 @@
   --table-fill-dark: #D1E3FF;           /* Light blue for Category cells (Terrestrial, Jovian, Dwarf, Gas, Ice) */
   --table-header-fill: #164BAF;         /* Blue color: for table header (name, mass, diameter) fill */
   --thead-text-color: #FFFFFF;
+
+  --focus-ring: 0 0 0 3px var(--background-primary), 0 0 0 5px var(--accent-color);
 }
 
 [data-theme="dark"],body.dark-mode {
@@ -50,6 +52,8 @@
   --table-fill-dark: #90A4D4;
   --table-header-fill: #141D2F;
   --thead-text-color: #D1E3FF;
+
+  --focus-ring: 0 0 0 3px var(--background-primary), 0 0 0 5px var(--accent-color);
 }
 body.dark-mode .planet-stats img{
   filter: brightness(0) invert(1);
@@ -152,7 +156,7 @@ header{
 }
 
 .page{
-  width: 730px;
+  width: min(730px, 100% - 32px);
   margin: 100px auto;
 
   @media(max-width: 780px){
@@ -201,9 +205,14 @@ header{
 
     &:focus-within {
       border-color: transparent;
-      box-shadow: 0 0 0 3px #F6F8FF, 0 0 0 5px #0079ff, 0 16px 30px -10px rgba(70, 96, 187, 0.198);
+      box-shadow: var(--focus-ring);
     }
   }
+}
+
+body.dark-mode .top button:hover img,
+body.dark-mode .top button:focus-visible img {
+  filter: brightness(0) invert(1);
 }
 
 .search{
@@ -234,7 +243,8 @@ header{
     flex: 1;
     font-size: 18px;
     background: transparent ;
-    
+    width: 100%;
+     
   }
 
   button{
@@ -262,7 +272,7 @@ header{
   
   &:focus-within {
     border-color: transparent;
-    box-shadow: 0 0 0 3px #F6F8FF, 0 0 0 5px #0079ff, 0 16px 30px -10px rgba(70, 96, 187, 0.198);
+    box-shadow: var(--focus-ring), 0 16px 30px -10px rgba(70, 96, 187, 0.198);
   }
 }
 
@@ -335,6 +345,64 @@ header{
   display: grid;
   grid-template-columns: 30px 1fr;
   font-size: 15px;
+}
+
+
+ #search-input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1; min-width: 0;
+}
+
+#search-status {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--error);
+  font-weight: bold;
+  font-family: monospace, Georgia, 'Times New Roman', serif;
+  pointer-events: none;
+  white-space: nowrap;
+  font-size: 1.2rem;
+}
+
+.search-error[hidden] {
+  display: none;
+}
+
+.planet-card--error{
+  grid:none;
+  }
+
+.planet-card--error > *:not(.search-error) {
+  display: none;
+}
+
+.planet-card--error .search-error:not([hidden]) {
+  display: block;
+  font-family: monospace, Georgia, 'Times New Roman', serif;
+
+}
+
+
+.search-error h2 {
+  font-size: clamp(22px);
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  color:#2B3442;
+  text-align: center;
+}
+
+.search-error p {
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #697C9A;
+  
 }
 
 .planetary-facts {
@@ -541,7 +609,7 @@ header{
 }
 
 @media (max-width: 600px) {
-  .planetary-source{
+  body:not(.dark-mode):not([data-theme="dark"]) .planetary-source{
     display: none;
   }
 
@@ -586,61 +654,4 @@ header{
     }
   }
 }
- #search-input::-webkit-search-cancel-button {
-  display: none;
-}
 
-.search-input-wrapper {
-  position: relative;
-  flex: 1;
-}
-
-#search-status {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--error);
-  font-weight: bold;
-  font-family: monospace, Georgia, 'Times New Roman', serif;
-  pointer-events: none;
-  white-space: nowrap;
-  font-size: 1.2rem;
-}
-
-
-
-.search-error[hidden] {
-  display: none;
-}
-
-.planet-card--error{
-  grid:none;
-  }
-
-.planet-card--error > *:not(.search-error) {
-  display: none;
-}
-
-.planet-card--error .search-error:not([hidden]) {
-  display: block;
-  font-family: monospace, Georgia, 'Times New Roman', serif;
-
-}
-
-
-.search-error h2 {
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
-  font-weight: 700;
-  margin-bottom: 0.85rem;
-  color:#2B3442;
-  text-align: center;
-}
-
-.search-error p {
-  margin: 0 auto;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #697C9A;
-  
-}
