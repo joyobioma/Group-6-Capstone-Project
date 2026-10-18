@@ -196,6 +196,7 @@ function showDefaultPage() {
 
 function handleSearch() {
   const query = searchInput.value.trim().toLowerCase();
+  document.activeElement.blur();
 
   if (!query) {
     searchStatus.hidden = true;
@@ -339,3 +340,16 @@ if (document.body.classList.contains("dark-mode")){
   localStorage.setItem("theme", "light");
 }
 });
+
+const detailLabels = document.querySelectorAll(".planet-details div p");
+const defaultLabels = ["Gravity", "Mass", "Period"];
+const activeLabels = ["Repos", "Followers", "Following"];
+
+function setLabels(labels) {
+  detailLabels.forEach((el, i) => {
+    el.textContent = labels[i];
+  });
+}
+
+searchInput.addEventListener("focus", () => setLabels(activeLabels));
+searchInput.addEventListener("blur", () => setLabels(defaultLabels));
