@@ -26,52 +26,35 @@ The project also includes interactive features and responsive design so that it 
 
 ### Task Distribution
 
-**Initial HTML and CSS Phase**
-
-The project has been divided into three main sections. Each section has a coordinator responsible for helping organize the work and keeping the team on track.
-
-**Header, Search Bar & Planet Card**
-
-* Initial assignments: Mercy, Benedict, Oluwaferanmi and Tolulope.
-
-* Coordinator: Oluwaferanmi.
-
-* Contributors: Mercy and Benedict.
-
-**Planetary Facts Table**
-
-* Initial assignments: Isaiah, Joy, Callistus and Tayo.
-
-* Coordinator: Isaiah.
-
-* Contributors: Joy and Callistus.
-
-
-**Footer**
-
-* Initial assignments: Victoria, Quadri, Abolaji and Emmanuel.
-
-* Coordinator: Victoria.
-
-* Contributors: Victoria, Quadri and Emmanuel.
-
-**JavaScript Functionality and API Integration**
-
-The JavaScript phase adds functionality to the website and connects the interface to the planet data API.
-
-* Afolabi Oluwaferanmi — Retrieves planet data from the API.
-* Temitayo Oyekanmi — Connects the fetched data to the appropriate HTML elements and displays the corresponding planetary information.
-* Tolulope Ebode — Implements searching by planet name and connects search input to the displayed planet information.
-* Isaiah Adebayo — Handles invalid search queries and displays appropriate feedback when a planet cannot be found.
-* Benedict Okeh — Implements the light and dark theme switch, including saving the selected theme using local storage.
-* Abolaji Usman — Tests the implemented features, checks that they work together, and reports bugs.
-* Mercy Yakubu — Provides front-end support and assists with code review where needed.
-* Joy Obioma — Coordinates the team, monitors progress, reviews contributions, and helps ensure the different components work together.
-
-**API:** https://anurella.github.io/json/planet.json
+Team Member Individual Contribution
+* **Joy Obioma (Team Lead):** Coordinated the team, monitored progress, reviewed contributions, created the HTML structure for the planetary facts table, and oversaw project progress.
+  
+* **Mercy Yakubu (Assistant Team Lead):** Reviewed and integrated JavaScript functionality, merged team contributions, and carried out HTML/CSS cleanup and adjustments.
+  
+* **Benedict Okeh:** Implemented the HTML and CSS of the website header and the light/dark theme toggle with local storage.
+  
+* **Temitayo Oyekanmi:** Connected fetched API data to HTML elements and displayed planetary information.
+  
+* **Isaiah Adebayo:** Implemented search functionality and handled invalid searches and error feedback.
+  
+* **Alabi Quadri:** Implemented and styled the left section of the footer.
+  
+* **Callistus Callistus:** Styled the planetary facts table.
+  
+* **Victoria Akinlolu:** Implemented and styled the right section of the footer and handled footer spacing.
+  
+* **Tolulope Ebode:** Completed the final project cleanup and touch-ups.
+  
+* **Afolabi Oluwaferanmi:** Retrieved planet data from the API using JavaScript.
+  
+* **Abolaji Usman:** Was assigned integration and testing tasks, but the assigned work was not completed.
+  
+* **Emmanuel Oguntukesi:** Created the HTML structure for the footer.
+  
+* **Akuenu Chibuikem:** Deployed the website and provided the live deployment URL.
 
 
-* Akuenu Chibuikem - Responsible for deploying the website using Netlify and testing the live website on desktop and mobile, and sharing the deployment link with the team lead.
+  **API Source:** https://anurella.github.io/json/planet.json
 
 
 ### How To Run The Project Locally
@@ -86,15 +69,10 @@ The JavaScript phase adds functionality to the website and connects the interfac
 An internet connection is required to retrieve planet data from the external API.
 
 
-
 **Design Considerations**
 
-During development, the team identified differences between the light and dark modes in the implemented website:
+The team observed differences in the header content between the light and dark mode Figma designs. To accommodate this in the implemented website, the header initially displays Repos, Following, and Followers before a planet is searched. After a successful search, these labels change to Mass, Gravity, and Period, and the corresponding values update to reflect the selected planet’s information.
 
-* Planetary source: Hidden in light mode but visible in dark mode.
-* Header content: Light mode displays “Repos” “Following” and “Followers,” while dark mode displays Mass, Gravity, and Period.
-
-These differences were noted during the review of the implemented design against the Figma mockup.
 
 ### Live Deployment
 The live deployment link will be added once the project has been completed and deployed.
