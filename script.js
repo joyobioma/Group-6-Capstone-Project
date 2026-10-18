@@ -1,3 +1,8 @@
+function withDecimal(value) {
+  if (value === null || value === undefined) return "Not available";
+  return Number.isInteger(value) ? value.toFixed(1) : String(value);
+}
+
 // Display a planet's information on the page
 function displayPlanet(planet) {
   // Update planet name
@@ -34,8 +39,8 @@ function displayPlanet(planet) {
   const detailValues = document.querySelectorAll(".planet-details div span");
 
   const details = [
-    planet.gravity,
-    planet.mass,
+    withDecimal(planet.gravity),
+    withDecimal(planet.mass),
     planet.period
   ];
 

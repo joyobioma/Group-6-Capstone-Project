@@ -152,7 +152,7 @@ header{
 }
 
 .page{
-  width: 730px;
+  width: min(730px, 100% - 32px);
   margin: 100px auto;
 
   @media(max-width: 780px){
@@ -234,7 +234,8 @@ header{
     flex: 1;
     font-size: 18px;
     background: transparent ;
-    
+    width: 100%;
+     
   }
 
   button{
@@ -540,8 +541,7 @@ header{
   }
 }
 
-@media (max-width: 600px) {
-  .planetary-source{
+body:not(.dark-mode):not([data-theme="dark"]) .planetary-source{
     display: none;
   }
 
@@ -563,7 +563,6 @@ header{
   .footer-right p {
     font-size: 16px;    
   } 
-}
 
 
 @media (max-width: 540px){
@@ -592,7 +591,7 @@ header{
 
 .search-input-wrapper {
   position: relative;
-  flex: 1;
+  flex: 1; min-width: 0;
 }
 
 #search-status {
@@ -630,7 +629,7 @@ header{
 
 
 .search-error h2 {
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-size: clamp(22px);
   font-weight: 700;
   margin-bottom: 0.85rem;
   color:#2B3442;
@@ -639,7 +638,7 @@ header{
 
 .search-error p {
   margin: 0 auto;
-  font-size: 1rem;
+  font-size: 15px;
   line-height: 1.7;
   color: #697C9A;
   
