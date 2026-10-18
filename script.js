@@ -1,3 +1,60 @@
+const PLANET_API_URL =
+  "https://anurella.github.io/json/planet.json";
+
+let planetsData = [];
+
+// ========================================
+// API FETCHING
+// ========================================
+
+async function fetchPlanets() {
+  try {
+    const response = await fetch(PLANET_API_URL);
+
+    if (!response.ok) {
+      throw new Error(
+        "Request failed: " +
+        response.status + " " +
+        response.statusText
+      );
+    }
+
+    const data = await response.json();
+
+    if (!Array.isArray(data) || data.length === 0) {
+      throw new Error(
+        "The API did not return a valid planet array."
+      );
+    }
+
+    planetsData = data;
+
+    console.log(
+      "Planet data fetched successfully:",
+      planetsData
+    );
+
+    document.dispatchEvent(
+      new CustomEvent("planetsLoaded", {
+        detail: planetsData
+      })
+    );
+
+    return planetsData;
+
+  } catch (error) {
+    console.error("Planet API error:", error);
+
+    document.dispatchEvent(
+      new CustomEvent("planetsLoadError", {
+        detail: error.message
+      })
+    );
+
+    return [];
+  }
+}
+
 function withDecimal(value) {
   if (value === null || value === undefined) return "Not available";
   return Number.isInteger(value) ? value.toFixed(1) : String(value);
@@ -64,67 +121,12 @@ function displayPlanet(planet) {
 }
 
 
-const PLANET_API_URL =
-  "https://anurella.github.io/json/planet.json";
-
-let planetsData = [];
-
-// ========================================
-// API FETCHING
-// ========================================
-
-async function fetchPlanets() {
-  try {
-    const response = await fetch(PLANET_API_URL);
-
-    if (!response.ok) {
-      throw new Error(
-        "Request failed: " +
-        response.status + " " +
-        response.statusText
-      );
-    }
-
-    const data = await response.json();
-
-    if (!Array.isArray(data) || data.length === 0) {
-      throw new Error(
-        "The API did not return a valid planet array."
-      );
-    }
-
-    planetsData = data;
-
-    console.log(
-      "Planet data fetched successfully:",
-      planetsData
-    );
-
-    document.dispatchEvent(
-      new CustomEvent("planetsLoaded", {
-        detail: planetsData
-      })
-    );
-
-    return planetsData;
-
-  } catch (error) {
-    console.error("Planet API error:", error);
-
-    document.dispatchEvent(
-      new CustomEvent("planetsLoadError", {
-        detail: error.message
-      })
-    );
-
-    return [];
-  }
-}
 document.addEventListener("planetsLoaded", (event) => {
   const planets = event.detail;
   const earth = planets.find(p => p.name?.toLowerCase() === "earth");
   displayPlanet(earth || planets[0]);
 });
+
 // ========================================
 // SEARCH ELEMENTS
 // ========================================
@@ -158,10 +160,7 @@ document.addEventListener("planetsLoadError", (event) => {
   dataLoaded = false;
 
   searchStatus.hidden = true;
-
-  showError(
-    "<p>Unable to load planet data. Please try again later.</p>"
-  );
+  clearError(); 
 
   console.error("Unable to load planets:", event.detail);
 });
@@ -313,9 +312,6 @@ if (document.readyState === "loading") {
   fetchPlanets();
 }
 
-
-
-
 // Dark Theme Functionality
 const themeToggle = document.querySelector("#theme-toggle");
 const themeLabel = document.querySelector("#theme-label");
@@ -343,5 +339,3 @@ if (document.body.classList.contains("dark-mode")){
   localStorage.setItem("theme", "light");
 }
 });
-
-  
