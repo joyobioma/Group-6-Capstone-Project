@@ -74,5 +74,8 @@ An internet connection is required to retrieve planet data from the external API
 The team observed differences in the header content between the light and dark mode Figma designs. To accommodate this in the implemented website, the header initially displays Repos, Following, and Followers before a planet is searched. After a successful search, these labels change to Mass, Gravity, and Period, and the corresponding values update to reflect the selected planet’s information.
 
 
-### Live Deployment
-The live deployment link will be added once the project has been completed and deployed.
+### Deployment Link
+
+https://group-6-capstone-project-olive.vercel.app/
+
+
