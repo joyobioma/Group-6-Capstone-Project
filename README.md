@@ -10,7 +10,7 @@ It is based on the provided Figma design and developed using HTML, CSS, and Java
 The project also includes interactive features and responsive design so that it works well across different screen sizes.
 
 ### Team Members 
-* Joy Obioma (Team Lead) - https://github.com/joyobioma
+* Ebubechukwu Obioma (Team Lead) - https://github.com/joyobioma
 * Mercy Yakubu ( Assistant Team Lead) - https://github.com/Mercyaksss
 * Temitayo Oyekanmi - https://github.com/temikanmi-ops
 * Isaiah Adebayo - https://github.com/ZahYah
@@ -27,7 +27,7 @@ The project also includes interactive features and responsive design so that it 
 ### Task Distribution
 
 Team Member Individual Contribution
-* **Joy Obioma (Team Lead):** Coordinated the team, monitored progress, reviewed contributions, created the HTML structure for the planetary facts table, and oversaw project progress.
+* **Ebubechukwu Obioma (Team Lead):** Coordinated the team, monitored progress, reviewed contributions, created the HTML structure for the planetary facts table, and oversaw project progress.
   
 * **Mercy Yakubu (Assistant Team Lead):** Reviewed and integrated JavaScript functionality, merged team contributions, and carried out HTML/CSS cleanup and adjustments.
   
